@@ -1,0 +1,177 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY, ALIGN=
+2
+    2 00000000                 EXPORT           __main
+    3 00000000         __main
+    4 00000000 480F            LDR              R0, =j
+    5 00000002 6801            LDR              R1, [R0]
+    6 00000004 4A0F            LDR              R2, =k
+    7 00000006 6813            LDR              R3, [R2]
+    8 00000008 F04F 0400       MOV              R4, #0
+    9 0000000C F04F 0500       MOV              R5, #0
+   10 00000010         TheLabel
+   11 00000010 42A3            CMP              R3, R4
+   12 00000012 D003            BEQ              TheEnd
+   13 00000014 440D            ADD              R5, R5, R1
+   14 00000016 F104 0401       ADD              R4, R4, #1
+   15 0000001A E7F9            B                TheLabel
+   16 0000001C         
+   17 0000001C         TheEnd
+   18 0000001C 4E0A            LDR              R6, =theAnswer
+   19 0000001E 6035            STR              R5, [R6]
+   20 00000020         
+   21 00000020 E7FE    BlackHole
+                               B                BlackHole
+   22 00000022         
+   23 00000022 00 00           ALIGN
+   24 00000024         
+   25 00000024                 EXPORT           SystemInit
+   26 00000024         SystemInit
+   27 00000024 4806            LDR              R0, =j
+   28 00000026 F04F 0105       MOV              R1, #5
+   29 0000002A 6001            STR              R1, [R0]
+   30 0000002C 4805            LDR              R0, =k
+   31 0000002E F04F 0103       MOV              R1, #0x3
+   32 00000032 6001            STR              R1, [R0]
+   33 00000034 4804            LDR              R0, =theAnswer
+   34 00000036 F04F 0100       MOV              R1, #0x00
+   35 0000003A 6001            STR              R1, [R0]
+   36 0000003C 4770            BX               LR
+   37 0000003E         
+   38 0000003E 00 00           ALIGN
+   39 00000040         
+   40 00000040 00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000         AREA             DATA, READWRITE, ALIGN=2
+   41 00000000                 EXPORT           j [DATA, SIZE=4]
+   42 00000000 00 00 00 
+              00       j       SPACE            4
+   43 00000004                 EXPORT           k [DATA, SIZE=4]
+   44 00000004 00 00 00 
+              00       k       SPACE            4
+   45 00000008                 EXPORT           theAnswer [DATA, Size=4]
+   46 00000008 00 00 00 
+              00       theAnswer
+                               SPACE            4
+   47 0000000C         
+   48 0000000C                 ALIGN
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   49 0000000C                 END
+Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\mai
+n.d -o.\main.o -IC:\winapps\Keil\ARM\RV31\INC -IC:\winapps\Keil\ARM\CMSIS\Inclu
+de -IC:\winapps\Keil\ARM\Inc\TI\TM4C123 --predefine="__EVAL SETA 1" --list=.\ma
+in.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file main.s
+   Uses
+      None
+Comment: .text unused
+BlackHole 00000020
+
+Symbol: BlackHole
+   Definitions
+      At line 21 in file main.s
+   Uses
+      At line 21 in file main.s
+Comment: BlackHole used once
+SystemInit 00000024
+
+Symbol: SystemInit
+   Definitions
+      At line 26 in file main.s
+   Uses
+      At line 25 in file main.s
+Comment: SystemInit used once
+TheEnd 0000001C
+
+Symbol: TheEnd
+   Definitions
+      At line 17 in file main.s
+   Uses
+      At line 12 in file main.s
+Comment: TheEnd used once
+TheLabel 00000010
+
+Symbol: TheLabel
+   Definitions
+      At line 10 in file main.s
+   Uses
+      At line 15 in file main.s
+Comment: TheLabel used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 3 in file main.s
+   Uses
+      At line 2 in file main.s
+Comment: __main used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DATA 00000000
+
+Symbol: DATA
+   Definitions
+      At line 40 in file main.s
+   Uses
+      None
+Comment: DATA unused
+j 00000000
+
+Symbol: j
+   Definitions
+      At line 42 in file main.s
+   Uses
+      At line 4 in file main.s
+      At line 27 in file main.s
+      At line 41 in file main.s
+
+k 00000004
+
+Symbol: k
+   Definitions
+      At line 44 in file main.s
+   Uses
+      At line 6 in file main.s
+      At line 30 in file main.s
+      At line 43 in file main.s
+
+theAnswer 00000008
+
+Symbol: theAnswer
+   Definitions
+      At line 46 in file main.s
+   Uses
+      At line 18 in file main.s
+      At line 33 in file main.s
+      At line 45 in file main.s
+
+4 symbols
+344 symbols in table

@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\lab1\lab1.uvproj
+Project File Date:  09/13/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling startup_TM4C123.s...
+assembling main.s...
+main.s(1): error: A1207E: Bad or unknown attribute
+main.s(4): error: A1186E: Code generated in data area
+main.s(5): error: A1186E: Code generated in data area
+main.s(6): error: A1186E: Code generated in data area
+main.s(7): error: A1186E: Code generated in data area
+main.s(8): error: A1186E: Code generated in data area
+main.s(9): error: A1186E: Code generated in data area
+main.s(11): error: A1186E: Code generated in data area
+main.s(12): error: A1186E: Code generated in data area
+main.s(13): error: A1163E: Unknown opcode R5, , expecting opcode or Macro
+main.s(14): error: A1647E: Bad register name symbol, expected Integer register
+main.s(15): error: A1186E: Code generated in data area
+main.s(18): error: A1186E: Code generated in data area
+main.s(19): error: A1186E: Code generated in data area
+main.s(21): error: A1186E: Code generated in data area
+main.s(27): error: A1186E: Code generated in data area
+main.s(28): warning: A1865W: '#' not seen before constant expression
+main.s(28): error: A1186E: Code generated in data area
+main.s(29): error: A1106E: Missing comma
+main.s(30): error: A1186E: Code generated in data area
+main.s(31): error: A1186E: Code generated in data area
+main.s(32): error: A1186E: Code generated in data area
+main.s(33): error: A1186E: Code generated in data area
+main.s(34): error: A1186E: Code generated in data area
+main.s(35): error: A1186E: Code generated in data area
+main.s(36): error: A1186E: Code generated in data area
+".\lab1.axf" - 25 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling startup_TM4C123.s...
+assembling main.s...
+main.s(13): error: A1163E: Unknown opcode R5, , expecting opcode or Macro
+main.s(14): error: A1647E: Bad register name symbol, expected Integer register
+main.s(28): warning: A1865W: '#' not seen before constant expression
+main.s(29): error: A1106E: Missing comma
+".\lab1.axf" - 3 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling main.s...
+main.s(13): error: A1163E: Unknown opcode R5, , expecting opcode or Macro
+main.s(28): warning: A1865W: '#' not seen before constant expression
+".\lab1.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling main.s...
+main.s(13): error: A1163E: Unknown opcode R5, , expecting opcode or Macro
+".\lab1.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling main.s...
+main.s(43): error: A1145E: Undefined exported symbol 'l'
+".\lab1.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling main.s...
+linking...
+.\lab1.axf: Error: L6286E: Relocation #REL:0 in main.o(.text) with respect to k. Value(0x7ffff1f) out of range(-1 - 0xfe) for (R_ARM_THM_PC8)
+".\lab1.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling main.s...
+main.s(28): warning: A1865W: '#' not seen before constant expression
+main.s(43): error: A1145E: Undefined exported symbol 'l'
+".\lab1.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling main.s...
+main.s(28): warning: A1865W: '#' not seen before constant expression
+linking...
+.\lab1.axf: Error: L6286E: Relocation #REL:0 in main.o(.text) with respect to k. Value(0x7ffff1f) out of range(-1 - 0xfe) for (R_ARM_THM_PC8)
+".\lab1.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+assembling main.s...
+linking...
+Program Size: Code=364 RO-data=620 RW-data=12 ZI-data=516  
+".\lab1.axf" - 0 Errors, 0 Warning(s).
