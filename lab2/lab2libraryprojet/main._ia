@@ -1,0 +1,5 @@
+--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork 
+-I C:\winapps\Keil\ARM\RV31\INC
+-I C:\winapps\Keil\ARM\CMSIS\Include
+-I C:\winapps\Keil\ARM\Inc\TI\TM4C123
+--list .\main.lst --xref -o .\main.o --depend .\main.d "..\main.s"
