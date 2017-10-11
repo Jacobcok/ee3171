@@ -11,12 +11,9 @@ SYSCTL_RCGCGPIO_R EQU 0x400FE608
  EXPORT __main
 __main
  LDR R0, =PortConfiguration
- BLX R0
- 
+ BLX R0 
  LDR R0, =GPIO_PORTB_DATA_R
- LDR R1, =GPIO_PORTD_DATA_R
- 
- MOV R6, #0
+ LDR R1, =GPIO_PORTD_DATA_R 
  
 ;RunForever
 ; LDR R2, [R1]
@@ -28,15 +25,21 @@ MainLoop
  MOV R2, #0x08
  STR R2, [R0]
  
-; delay 0.25 secs
-DelayLoop CMP R6, #2
- ADD R6, R6, #1
+; delay loop
+ LDR R5, =200000
+DelayLoop
+ SUBS R5, #1
  BNE DelayLoop
- MOV R6, #0
  
 ; turn LED3 off
  MOV R2, #0
  STR R2, [R0]
+ 
+; delay loop2
+ LDR R5, =200000
+DelayLoop2
+ SUBS R5, #1
+ BNE DelayLoop2
  
  B MainLoop
 
