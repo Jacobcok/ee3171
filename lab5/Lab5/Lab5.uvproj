@@ -45,7 +45,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>labLP</OutputName>
+          <OutputName>Lab5</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -406,14 +406,19 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>startup_TM4C123.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\startup_TM4C123.s</FilePath>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>main.s</FileName>
+              <FileName>startup_rvmdk.S</FileName>
               <FileType>2</FileType>
-              <FilePath>..\main.s</FilePath>
+              <FilePath>.\startup_rvmdk.S</FilePath>
+            </File>
+            <File>
+              <FileName>keypad.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\keypad.h</FilePath>
             </File>
           </Files>
         </Group>

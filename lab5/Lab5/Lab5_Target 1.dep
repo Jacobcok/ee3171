@@ -1,0 +1,7 @@
+Dependencies for Project 'Lab5', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.c)(0x57D829FD)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C86004)
+I (C:\Users\cmcischk\Documents\New 3171 Labs\Lab5\keypad.h)(0x57D81534)
+I (C:\Users\cmcischk\Documents\New 3171 Labs\Lab5\sleep.h)(0x57D81562)
+I (C:\Users\cmcischk\Documents\New 3171 Labs\Lab5\LCD.h)(0x57D82A76)
+F (.\startup_rvmdk.S)(0x57978DF2)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_rvmdk.lst --xref -o .\startup_rvmdk.o --depend .\startup_rvmdk.d)
