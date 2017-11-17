@@ -1,0 +1,39 @@
+/*
+	(a)
+		*/		
+
+CTLSTAT = 0x02; //power bit 1 must be set high 
+DIR = 0x00; // 0 is input 1 is output
+
+/*
+	(b)
+		*/
+
+volatile uint8_t i = 0;
+while(i<10)
+{
+	while ((CTLSTAT & 0x08) != 0x08) //read single byte of data
+	{
+		stuff[i] = DATA; //store incoming DATA byte into the array
+		i++; //increment array location
+	}	
+}
+return 0;
+
+
+
+/*
+	(c)
+		*/
+
+volatile uint8_t i = 0;
+void IntGPIO(void)
+{
+	if(i<10)
+	{
+		stuff[i] = DATA; //store incoming DATA byte into the array
+		i++; //increment array location
+	}
+	INTCTL = 0x01; //clear interrupt flag after it occurs
+	return;
+}
