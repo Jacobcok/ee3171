@@ -1,3 +1,3 @@
 Dependencies for Project 'labLP', Target 'Target 1': (DO NOT MODIFY !)
-F (..\startup_TM4C123.s)(0x59DE24E1)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\winapps\Keil\ARM\RV31\INC-I C:\winapps\Keil\ARM\CMSIS\Include-I C:\winapps\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
-F (..\main.s)(0x59DE6A16)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\winapps\Keil\ARM\RV31\INC-I C:\winapps\Keil\ARM\CMSIS\Include-I C:\winapps\Keil\ARM\Inc\TI\TM4C123--list .\main.lst --xref -o .\main.o --depend .\main.d)
+F (..\startup_TM4C123.s)(0x5A789119)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\winapps\Keil\ARM\RV31\INC-I C:\winapps\Keil\ARM\CMSIS\Include-I C:\winapps\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
+F (..\main.s)(0x5A789119)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\winapps\Keil\ARM\RV31\INC-I C:\winapps\Keil\ARM\CMSIS\Include-I C:\winapps\Keil\ARM\Inc\TI\TM4C123--list .\main.lst --xref -o .\main.o --depend .\main.d)
