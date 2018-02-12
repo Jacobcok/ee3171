@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\lab2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\lab2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Feb 12 13:37:58 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Feb 12 16:09:13 2018
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,10 +12,10 @@ Call chain for Maximum Stack Depth:</H3>
 <H3>
 Functions with no stack information
 </H3><UL>
+ <LI><a href="#[78]">__main</a>
+ <LI><a href="#[77]">SystemInit</a>
  <LI><a href="#[7a]">__user_initial_stackheap</a>
- <LI><a href="#[77]">__main</a>
- <LI><a href="#[76]">SystemInit</a>
- <LI><a href="#[78]">PortConfiguration</a>
+ <LI><a href="#[76]">PortConfiguration</a>
 </UL>
 </UL>
 <P>
@@ -213,7 +213,7 @@ Function Pointers
  <LI><a href="#[74]">PWM1_3_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[75]">PWM1_FAULT_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[8]">PendSV_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[78]">PortConfiguration</a> from main.o(.text) referenced from main.o(.text)
+ <LI><a href="#[76]">PortConfiguration</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[17]">QEI0_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[30]">QEI1_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[5e]">QEI2_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -225,7 +225,7 @@ Function Pointers
  <LI><a href="#[6]">SVC_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[26]">SYSCTL_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[9]">SysTick_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[76]">SystemInit</a> from main.o(.text) referenced from startup_tm4c123.o(.text)
+ <LI><a href="#[77]">SystemInit</a> from main.o(.text) referenced from startup_tm4c123.o(.text)
  <LI><a href="#[1d]">TIMER0A_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[1e]">TIMER0B_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[1f]">TIMER1A_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -263,12 +263,18 @@ Function Pointers
  <LI><a href="#[56]">WTIMER4B_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[57]">WTIMER5A_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[58]">WTIMER5B_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[77]">__main</a> from main.o(.text) referenced from startup_tm4c123.o(.text)
+ <LI><a href="#[78]">__main</a> from main.o(.text) referenced from startup_tm4c123.o(.text)
 </UL>
 <P>
 <H3>
 Global Symbols
 </H3>
+<P><STRONG><a name="[78]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
+</UL>
+<P><STRONG><a name="[77]"></a>SystemInit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
+</UL>
 <P><STRONG><a name="[79]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
 
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
@@ -1091,17 +1097,11 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
 <P><STRONG><a name="[7a]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_tm4c123.o(.text), UNUSED, KEPT)
-
-<P><STRONG><a name="[77]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
-</UL>
-<P><STRONG><a name="[76]"></a>SystemInit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
-</UL><P>
+<P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[78]"></a>PortConfiguration</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
+<P><STRONG><a name="[76]"></a>PortConfiguration</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
 </UL><P>
 <H3>
