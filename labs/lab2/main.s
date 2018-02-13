@@ -5,10 +5,6 @@ GPIO_PORTD_AMSEL_R EQU 0x40007528
 GPIO_PORTB_DATA_R EQU 0x400053FC
 GPIO_PORTB_DIR_R EQU 0x40005400
 GPIO_PORTB_DEN_R EQU 0x4000551C
-GPIO_PORTF_DATA_R EQU 0x40025020
-GPIO_PORTF_DIR_R EQU 0x40025400
-GPIO_PORTF_DEN_R EQU 0x4002551C
-GPIO_PORTF_AFSEL_R EQU 0x40025420
 
 SYSCTL_RCGCGPIO_R EQU 0x400FE608
 
@@ -16,58 +12,45 @@ SYSCTL_RCGCGPIO_R EQU 0x400FE608
  EXPORT __main
 __main
 
-SYSTEM_CLOCK_FREQUENCY EQU 16000000
-DELAY_VALUE EQU SYSTEM_CLOCK_FREQUENCY /80
+DELAY_VALUE EQU 2670000
 
 
  LDR R0, =PortConfiguration
  BLX R0 
  LDR R0, =GPIO_PORTB_DATA_R
- LDR R1, =GPIO_PORTD_DATA_R
- LDR R2, =GPIO_PORTF_DATA_R
+; LDR R1, =GPIO_PORTD_DATA_R
  
+;THIS SECTION IS FOR PART 1	
 ;RunForever
-; LDR R2, [R1]
-; STR R2, [R0]
-; B RunForever
+ ;LDR R2, [R1]
+ ;STR R2, [R0]
+ ;B RunForever
 
-LED_Flash
- LDR R0, [R2]
- EOR R0, R0, #0x08
- STR R0, [R2]
- 
-; delay loop
+;THIS SECTION IS FOR PART 2
+    ; turn the LED3 on
+MainLoop 
+ MOV R2, #0x02
+ STR R2, [R0]
+
+    ; delay loop
  LDR R5, =DELAY_VALUE
 Delay
  SUBS R5, #1
  BNE Delay
- B LED_Flash
 
-; turn the LED3 on
-;MainLoop 
-; MOV R2, #0x08
-; STR R2, [R0]
+    ; turn LED3 off
+ MOV R2, #0
+ STR R2, [R0]
  
-; delay loop
-; LDR R5, =200000
-;DelayLoop
-; SUBS R5, #1
-; BNE DelayLoop
- 
-; turn LED3 off
-; MOV R2, #0
-; STR R2, [R0]
- 
-; delay loop2
-; LDR R5, =200000
-;DelayLoop2
-; SUBS R5, #1
-; BNE DelayLoop2
- 
-; B MainLoop
+    ; delay loop
+ LDR R5, =DELAY_VALUE
+LEDoff
+ SUBS R5, #1
+ BNE LEDoff 
+ B MainLoop
 
 PortConfiguration
-; Port B initializations first
+; LED Port B initializations first
  LDR R0, =SYSCTL_RCGCGPIO_R
  LDR R1, [R0]
  ORR R1, R1, #0x02
@@ -78,14 +61,14 @@ PortConfiguration
  NOP
  LDR R0, =GPIO_PORTB_DIR_R
  LDR R1, [R0]
- ORR R1, R1, #0x08
+ ORR R1, R1, #0x0F
  STR R1, [R0]
  LDR R0, =GPIO_PORTB_DEN_R
  LDR R1, [R0]
- ORR R1, R1, #0x08
+ ORR R1, R1, #0x0F
  STR R1, [R0]
  
-; Port D initializaion
+; SW Port D initializaion
  LDR R0, =SYSCTL_RCGCGPIO_R
  LDR R1, [R0]
  ORR R1, R1, #0x08
@@ -105,24 +88,6 @@ PortConfiguration
  LDR R0, =GPIO_PORTD_DEN_R
  LDR R1, [R0]
  ORR R1, R1, #0x0F
- STR R1, [R0]
- 
-; Port F init
- LDR R0, =SYSCTL_RCGCGPIO_R
- LDR R1, [R0]
- ORR R1, R1, #0x20
- STR R1, [R0]
- NOP
- NOP
- NOP
- NOP
- LDR R0, =GPIO_PORTF_DIR_R
- LDR R1, [R0]
- BIC R1, R1, #0x08
- STR R1, [R0]
- LDR R0, =GPIO_PORTF_DEN_R
- LDR R1, [R0]
- ORR R1, R1, #0x08
  STR R1, [R0]
  
  BX LR
