@@ -448,9 +448,8 @@ ARM Macro Assembler    Page 7
               400073FC 
               400043FC 
 Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\key
-pad.d -o.\keypad.o -IC:\winapps\Keil\ARM\RV31\INC -IC:\winapps\Keil\ARM\CMSIS\I
-nclude -IC:\winapps\Keil\ARM\Inc\TI\TM4C123 --predefine="__EVAL SETA 1" --list=
-.\keypad.lst keypad.s
+pad.d -o.\keypad.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil
+\ARM\Inc\TI\TM4C123 --predefine="__EVAL SETA 1" --list=.\keypad.lst keypad.s
 
 
 
