@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\KeypadLock.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\KeypadLock.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Feb 19 18:31:45 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Feb 26 19:57:48 2018
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,12 +12,13 @@ Call chain for Maximum Stack Depth:</H3>
 <H3>
 Functions with no stack information
 </H3><UL>
- <LI><a href="#[7a]">__user_initial_stackheap</a>
+ <LI><a href="#[7d]">__user_initial_stackheap</a>
  <LI><a href="#[77]">__main</a>
  <LI><a href="#[76]">SystemInit</a>
- <LI><a href="#[7b]">BuildKeypadLookupTable</a>
- <LI><a href="#[7c]">KeypadInit</a>
- <LI><a href="#[78]">KeypadGetKey</a>
+ <LI><a href="#[78]">BuildKeypadLookupTable</a>
+ <LI><a href="#[79]">KeypadInit</a>
+ <LI><a href="#[7b]">KeypadGetKey</a>
+ <LI><a href="#[7a]">PortConfiguration</a>
 </UL>
 </UL>
 <P>
@@ -140,7 +141,6 @@ Mutually Recursive functions
  <LI><a href="#[73]">PWM1_2_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[73]">PWM1_2_Handler</a><BR>
  <LI><a href="#[74]">PWM1_3_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[74]">PWM1_3_Handler</a><BR>
  <LI><a href="#[75]">PWM1_FAULT_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[75]">PWM1_FAULT_Handler</a><BR>
- <LI><a href="#[77]">__main</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[77]">__main</a><BR>
 </UL>
 <P>
 <H3>
@@ -154,6 +154,7 @@ Function Pointers
  <LI><a href="#[3a]">ADC1SS1_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[3b]">ADC1SS2_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[3c]">ADC1SS3_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
+ <LI><a href="#[78]">BuildKeypadLookupTable</a> from keypad.o(.text) referenced from main.o(.text)
  <LI><a href="#[4]">BusFault_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[31]">CAN0_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[32]">CAN1_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -203,7 +204,8 @@ Function Pointers
  <LI><a href="#[48]">I2C3_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[5a]">I2C4_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[5b]">I2C5_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[78]">KeypadGetKey</a> from keypad.o(.text) referenced from main.o(.text)
+ <LI><a href="#[7b]">KeypadGetKey</a> from keypad.o(.text) referenced from main.o(.text)
+ <LI><a href="#[79]">KeypadInit</a> from keypad.o(.text) referenced from main.o(.text)
  <LI><a href="#[3]">MemManage_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[1]">NMI_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[13]">PMW0_FAULT_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -217,10 +219,11 @@ Function Pointers
  <LI><a href="#[74]">PWM1_3_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[75]">PWM1_FAULT_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[8]">PendSV_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
+ <LI><a href="#[7a]">PortConfiguration</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[17]">QEI0_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[30]">QEI1_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[5e]">QEI2_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[79]">Reset_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
+ <LI><a href="#[7c]">Reset_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[11]">SSI0_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[2c]">SSI1_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[40]">SSI2_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -272,7 +275,7 @@ Function Pointers
 <H3>
 Global Symbols
 </H3>
-<P><STRONG><a name="[79]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
+<P><STRONG><a name="[7c]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
 
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
@@ -1093,28 +1096,29 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[7a]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_tm4c123.o(.text), UNUSED, KEPT)
+<P><STRONG><a name="[7d]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_tm4c123.o(.text), UNUSED, KEPT)
 
 <P><STRONG><a name="[77]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
-</UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
-</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
 </UL>
 <P><STRONG><a name="[76]"></a>SystemInit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
 </UL>
-<P><STRONG><a name="[7b]"></a>BuildKeypadLookupTable</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, keypad.o(.text), UNUSED)
-
-<P><STRONG><a name="[7c]"></a>KeypadInit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, keypad.o(.text), UNUSED)
-
-<P><STRONG><a name="[78]"></a>KeypadGetKey</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, keypad.o(.text))
+<P><STRONG><a name="[78]"></a>BuildKeypadLookupTable</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, keypad.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[79]"></a>KeypadInit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, keypad.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[7b]"></a>KeypadGetKey</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, keypad.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
 </UL><P>
 <H3>
 Local Symbols
-</H3><P>
+</H3>
+<P><STRONG><a name="[7a]"></a>PortConfiguration</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL><P>
 <H3>
 Undefined Global Symbols
 </H3><HR></body></html>

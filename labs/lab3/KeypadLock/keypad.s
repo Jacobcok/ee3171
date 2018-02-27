@@ -48,7 +48,7 @@ BuildKeypadLookupTable
  ADD R0, #1
  MOV R1, #'7'
  STRB R1, [R0]
-  ADD R0, #1
+ ADD R0, #1
  MOV R1, #'8'
  STRB R1, [R0]
  ADD R0, #1
