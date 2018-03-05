@@ -7,33 +7,3 @@
 Project File Date:  07/30/2016
 
 <h2>Output:</h2>
-Build target 'Target 1'
-assembling main.s...
-main.s(120): error: A1516E: Bad symbol 'GPIO_PORTD_DIR_R', not defined or external
-main.s(124): error: A1516E: Bad symbol 'GPIO_PORTD_AMSEL_R', not defined or external
-main.s(128): error: A1516E: Bad symbol 'GPIO_PORTD_DEN_R', not defined or external
-".\KeypadLock.axf" - 3 Errors, 0 Warning(s).
-Target not created
-Build target 'Target 1'
-assembling main.s...
-main.s(95): error: A1108E: Multiply defined symbol 'GPIO_PORTB_DATA_R'
-main.s(96): error: A1108E: Multiply defined symbol 'GPIO_PORTB_DIR_R'
-main.s(97): error: A1108E: Multiply defined symbol 'GPIO_PORTB_DEN_R'
-main.s(98): error: A1108E: Multiply defined symbol 'SYSCTL_RCGCGPIO_R'
-".\KeypadLock.axf" - 4 Errors, 0 Warning(s).
-Target not created
-Build target 'Target 1'
-assembling main.s...
-linking...
-Program Size: Code=1000 RO-data=620 RW-data=32 ZI-data=512  
-".\KeypadLock.axf" - 0 Errors, 0 Warning(s).
-Build target 'Target 1'
-assembling main.s...
-linking...
-Program Size: Code=1048 RO-data=620 RW-data=32 ZI-data=512  
-".\KeypadLock.axf" - 0 Errors, 0 Warning(s).
-Build target 'Target 1'
-assembling main.s...
-linking...
-Program Size: Code=1052 RO-data=620 RW-data=32 ZI-data=512  
-".\KeypadLock.axf" - 0 Errors, 0 Warning(s).
