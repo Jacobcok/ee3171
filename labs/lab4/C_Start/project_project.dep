@@ -1,0 +1,12 @@
+Dependencies for Project 'project', Target 'project': (DO NOT MODIFY !)
+F (.\project.c)(0x578E33F2)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.\inc -I.\driverlib -I..\.. --c99-I C:\winapps\Keil\ARM\RV31\INC-I C:\winapps\Keil\ARM\CMSIS\Include-I Device\Include\TM4C123-Drvmdk -DPART_LM4F232H5BB -DTARGET_IS_TM4C123_RA3 -o .\rvmdk\project.o --omf_browse .\rvmdk\project.crf --depend .\rvmdk\project.d)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x00000000)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x00000000)
+I (\\homedir.mtu.edu\home\Desktop\Github\ee3171\labs\lab4\C_Start\inc\hw_memmap.h)(0x543E6304)
+I (\\homedir.mtu.edu\home\Desktop\Github\ee3171\labs\lab4\C_Start\driverlib\debug.h)(0x543E6300)
+I (\\homedir.mtu.edu\home\Desktop\Github\ee3171\labs\lab4\C_Start\driverlib\gpio.h)(0x543E6302)
+I (\\homedir.mtu.edu\home\Desktop\Github\ee3171\labs\lab4\C_Start\driverlib\rom.h)(0x543E6302)
+I (\\homedir.mtu.edu\home\Desktop\Github\ee3171\labs\lab4\C_Start\driverlib\sysctl.h)(0x543E6302)
+F (.\startup_rvmdk.S)(0x543E6300)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\winapps\Keil\ARM\RV31\INC-I C:\winapps\Keil\ARM\CMSIS\Include-I Device\Include\TM4C123-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
+F (.\driverlib\rvmdk\driverlib.lib)(0x543E6302)()
+F (.\readme.txt)(0x543E6300)()
