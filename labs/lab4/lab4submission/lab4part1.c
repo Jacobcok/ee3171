@@ -94,27 +94,20 @@ __error__(char *pcFilename, uint32_t ui32Line)
 //*****************************************************************************
 // Prototype Subroutines here if needed
 void Board_Init(void);
-void Time_Delay(void);
 
 //*****************************************************************************
 // Global Variable Declarations go here
 volatile uint32_t i;
-volatile uint32_t threshold = 642500;
-// normal operation is 1, reverse direction is 2
-volatile uint32_t direction; 
-volatile uint32_t forward = 1;
-volatile uint32_t reverse = 2;
+uint32_t threshold = 100;
 
 //*****************************************************************************
 //Main Program
 int main(void)
 {
 	// Any initializations go here
-
 	
 	// Main code
 	Board_Init();
-	
 	// port configuration
 	// port b (LEDs)
 	SYSCTL_RCGCGPIO_R |= 0x02;
@@ -128,67 +121,7 @@ int main(void)
 	GPIO_PORTD_DEN_R   |=   0x0F;		
 	
 	while(1) 	{
-		Time_Delay();
-		
-		// SW4: PD2, SW5: PD3
-		// if SW5 is pressed, sequence: LED0 -> 3
-		while (direction == forward) {
-			// turn on LED3
-			GPIO_PORTB_DATA_R |= 0x08;
-			Time_Delay();
-			// turn off LEDs
-			GPIO_PORTB_DATA_R &= ~(0x0F);
-			
-			// turn on LED2
-			GPIO_PORTB_DATA_R |= 0x04;
-			Time_Delay();
-			// turn off LEDs
-			GPIO_PORTB_DATA_R &= ~(0x0F);
-			
-			// turn on LED1
-			GPIO_PORTB_DATA_R |= 0x02;
-			Time_Delay();
-			// turn off LEDs
-			GPIO_PORTB_DATA_R &= ~(0x0F);
-			
-			// turn on LED0
-			GPIO_PORTB_DATA_R |= 0x01;
-			Time_Delay();
-			// turn off LEDs
-			GPIO_PORTB_DATA_R &= ~(0x0F);
-		}			
-	
-
-
-	// if SW4 is pressed, sequence: LED3 -> 0
-	while (direction == reverse) {
-		// turn on LED0
-		GPIO_PORTB_DATA_R |= 0x01;
-		Time_Delay();
-		// turn off LEDs
-		GPIO_PORTB_DATA_R &= ~(0x0F);
-		
-		// turn on LED1
-		GPIO_PORTB_DATA_R |= 0x02;
-		Time_Delay();
-		// turn off LEDs
-		GPIO_PORTB_DATA_R &= ~(0x0F);
-		
-		// turn on LED2
-		GPIO_PORTB_DATA_R |= 0x04;
-		Time_Delay();
-		// turn off LEDs
-		GPIO_PORTB_DATA_R &= ~(0x0F);
-		
-		// turn on LED3
-		GPIO_PORTB_DATA_R |= 0x08;
-		Time_Delay();
-		// turn off LEDs
-		GPIO_PORTB_DATA_R &= ~(0x0F);
-	}
-
-		
-		
+			GPIO_PORTB_DATA_R = GPIO_PORTD_DATA_R;
 	}
 	
 
@@ -202,15 +135,3 @@ void Board_Init(void)
 	return;
 }
 
-void Time_Delay(void) 
-{
-	for (i=0; i<threshold; i++) {
-		if (GPIO_PORTD_DATA_R == 0x02){
-			direction = forward;
-		}
-		if (GPIO_PORTD_DATA_R == 0x01){
-			direction = reverse;
-		}
-	}
-	return;
-}

@@ -4,7 +4,9 @@ ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
 
 Section Cross References
 
-    project.o(i.main) refers to project.o(i.Board_Init) for Board_Init
+    project.o(i.Time_Delay) refers to project.o(.data) for .data
+    project.o(i.main) refers to project.o(i.Time_Delay) for Time_Delay
+    project.o(i.main) refers to project.o(.data) for .data
     startup_rvmdk.o(RESET) refers to startup_rvmdk.o(STACK) for StackMem
     startup_rvmdk.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
@@ -28,10 +30,11 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
+    Removing project.o(i.Board_Init), (8 bytes).
     Removing startup_rvmdk.o(HEAP), (0 bytes).
     Removing startup_rvmdk.o(.text), (0 bytes).
 
-2 unused section(s) (total 0 bytes) removed from the image.
+3 unused section(s) (total 8 bytes) removed from the image.
 
 ==============================================================================
 
@@ -42,19 +45,19 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     RESET                                    0x00000000   Section      648  startup_rvmdk.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
@@ -75,13 +78,14 @@ Image Symbol Table
     .ARM.Collect$$$$00002712                 0x00000298   Section        4  entry2.o(.ARM.Collect$$$$00002712)
     __lit__00000000                          0x00000298   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x0000029c   Section       36  init.o(.text)
-    i.Board_Init                             0x000002c0   Section        0  project.o(i.Board_Init)
-    i.__scatterload_copy                     0x00000324   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00000332   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00000334   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.main                                   0x00000342   Section        0  project.o(i.main)
-    STACK                                    0x20000000   Section      256  startup_rvmdk.o(STACK)
-    StackMem                                 0x20000000   Data           0  startup_rvmdk.o(STACK)
+    i.Time_Delay                             0x000002c0   Section        0  project.o(i.Time_Delay)
+    i.__scatterload_copy                     0x000002fc   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000030a   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0000030c   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x0000031c   Section        0  project.o(i.main)
+    .data                                    0x20000000   Section       20  project.o(.data)
+    STACK                                    0x20000018   Section      256  startup_rvmdk.o(STACK)
+    StackMem                                 0x20000018   Data           0  startup_rvmdk.o(STACK)
 
     Global Symbols
 
@@ -107,14 +111,19 @@ Image Symbol Table
     __rt_final_exit                          0x00000299   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
     __scatterload                            0x0000029d   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x0000029d   Thumb Code     0  init.o(.text)
-    Board_Init                               0x000002c1   Thumb Code    78  project.o(i.Board_Init)
-    __scatterload_copy                       0x00000325   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00000333   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00000335   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    main                                     0x00000343   Thumb Code    10  project.o(i.main)
-    Region$$Table$$Base                      0x0000034c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0000035c   Number         0  anon$$obj.o(Region$$Table)
-    __initial_sp                             0x20000100   Data           0  startup_rvmdk.o(STACK)
+    Time_Delay                               0x000002c1   Thumb Code    50  project.o(i.Time_Delay)
+    __scatterload_copy                       0x000002fd   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000030b   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0000030d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x0000031d   Thumb Code   282  project.o(i.main)
+    Region$$Table$$Base                      0x00000454   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000474   Number         0  anon$$obj.o(Region$$Table)
+    threshold                                0x20000000   Data           4  project.o(.data)
+    forward                                  0x20000004   Data           4  project.o(.data)
+    reverse                                  0x20000008   Data           4  project.o(.data)
+    i                                        0x2000000c   Data           4  project.o(.data)
+    direction                                0x20000010   Data           4  project.o(.data)
+    __initial_sp                             0x20000118   Data           0  startup_rvmdk.o(STACK)
 
 
 
@@ -124,36 +133,39 @@ Memory Map of the image
 
   Image Entry point : 0x0000026d
 
-  Load Region LR_IROM (Base: 0x00000000, Size: 0x0000035c, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x00000488, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM (Base: 0x00000000, Size: 0x0000035c, Max: 0x00040000, ABSOLUTE)
-
-    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x00000000   0x00000288   Code   RO           44  * RESET               startup_rvmdk.o
-    0x00000288   0x00000000   Code   RO           49  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x00000288   0x00000004   Code   RO           52    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0000028c   0x00000004   Code   RO           55    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000290   0x00000000   Code   RO           57    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000290   0x00000000   Code   RO           59    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000290   0x00000008   Code   RO           60    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x00000298   0x00000000   Code   RO           62    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x00000298   0x00000000   Code   RO           64    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x00000298   0x00000004   Code   RO           53    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x0000029c   0x00000024   Code   RO           66    .text               mc_w.l(init.o)
-    0x000002c0   0x00000064   Code   RO            1    i.Board_Init        project.o
-    0x00000324   0x0000000e   Code   RO           70    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00000332   0x00000002   Code   RO           71    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00000334   0x0000000e   Code   RO           72    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00000342   0x0000000a   Code   RO            2    i.main              project.o
-    0x0000034c   0x00000010   Data   RO           68    Region$$Table       anon$$obj.o
-
-
-    Execution Region RW_IRAM (Base: 0x20000000, Size: 0x00000100, Max: 0x00008000, ABSOLUTE)
+    Execution Region ER_IROM (Base: 0x00000000, Size: 0x00000474, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000100   Zero   RW           42    STACK               startup_rvmdk.o
+    0x00000000   0x00000288   Code   RO           53  * RESET               startup_rvmdk.o
+    0x00000288   0x00000000   Code   RO           58  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000004   Code   RO           61    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x00000004   Code   RO           64    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000000   Code   RO           66    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000000   Code   RO           68    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000290   0x00000008   Code   RO           69    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000298   0x00000000   Code   RO           71    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000298   0x00000000   Code   RO           73    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000298   0x00000004   Code   RO           62    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000029c   0x00000024   Code   RO           75    .text               mc_w.l(init.o)
+    0x000002c0   0x0000003c   Code   RO            2    i.Time_Delay        project.o
+    0x000002fc   0x0000000e   Code   RO           79    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000030a   0x00000002   Code   RO           80    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0000030c   0x0000000e   Code   RO           81    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000031a   0x00000002   PAD
+    0x0000031c   0x00000138   Code   RO            3    i.main              project.o
+    0x00000454   0x00000020   Data   RO           77    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM (Base: 0x20000000, Size: 0x00000118, Max: 0x00008000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000014   Data   RW            4    .data               project.o
+    0x20000014   0x00000004   PAD
+    0x20000018   0x00000100   Zero   RW           51    STACK               startup_rvmdk.o
 
 
 ==============================================================================
@@ -163,13 +175,13 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       110         22          0          0          0       2376   project.o
-       648        622          0          0        256        236   startup_rvmdk.o
+       372         40          0         20          0       6485   project.o
+       648        622          0          0        256        228   startup_rvmdk.o
 
     ----------------------------------------------------------------------
-       758        644         16          0        256       2612   Object Totals
-         0          0         16          0          0          0   (incl. Generated)
-         0          0          0          0          0          0   (incl. Padding)
+      1020        662         32         20        260       6713   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -187,8 +199,8 @@ Image component sizes
         36          8          0          0          0         68   init.o
 
     ----------------------------------------------------------------------
-        86         16          0          0          0         68   Library Totals
-         0          0          0          0          0          0   (incl. Padding)
+        88         16          0          0          0         68   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -197,7 +209,7 @@ Image component sizes
         86         16          0          0          0         68   mc_w.l
 
     ----------------------------------------------------------------------
-        86         16          0          0          0         68   Library Totals
+        88         16          0          0          0         68   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -206,15 +218,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       844        660         16          0        256       2680   Grand Totals
-       844        660         16          0        256       2680   ELF Image Totals
-       844        660         16          0          0          0   ROM Totals
+      1108        678         32         20        260       6781   Grand Totals
+      1108        678         32         20        260       6781   ELF Image Totals
+      1108        678         32         20          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                  860 (   0.84kB)
-    Total RW  Size (RW Data + ZI Data)               256 (   0.25kB)
-    Total ROM Size (Code + RO Data + RW Data)        860 (   0.84kB)
+    Total RO  Size (Code + RO Data)                 1140 (   1.11kB)
+    Total RW  Size (RW Data + ZI Data)               280 (   0.27kB)
+    Total ROM Size (Code + RO Data + RW Data)       1160 (   1.13kB)
 
 ==============================================================================
 

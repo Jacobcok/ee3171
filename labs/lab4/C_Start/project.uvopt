@@ -122,6 +122,10 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGUARM</Key>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>UL2CM3</Key>
           <Name>UL2CM3(-O207 -S0 -C0 -FO7  -FN1 -FC1000 -FD20000000 -FF0TM4C123_128 -FL020000 -FS00 -FP0($$Device:TM4C123GE6PZ$Flash\TM4C123_128.FLM)</Name>
         </SetRegEntry>
@@ -188,10 +192,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>2</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>92</TopLine>
-      <CurrentLine>106</CurrentLine>
+      <TopLine>102</TopLine>
+      <CurrentLine>111</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\project.c</PathWithFileName>
       <FilenameWithoutPath>project.c</FilenameWithoutPath>
@@ -206,7 +210,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>268</TopLine>
+      <TopLine>260</TopLine>
       <CurrentLine>273</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_rvmdk.S</PathWithFileName>
