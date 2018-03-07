@@ -1,0 +1,26 @@
+/* First two are most commonly used, and will be expected in the class (mostly) */
+
+// one true bracing style
+if (a==b) {
+	b=10;
+}
+
+// Allman/BSD
+if (a == b)
+{
+	b = 10;
+}
+
+/* A few other standards */
+
+//Whitesmith
+if (a==b)
+	{
+	b = 10;
+	}	
+
+// GNU
+if (a == b)
+  {
+  	b= 10; 
+  }

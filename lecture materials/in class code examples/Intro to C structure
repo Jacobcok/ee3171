@@ -1,0 +1,47 @@
+/********************************\
+| Author:                        |
+| Date:                          |
+| Program:						 |
+| Last Updated:                  |
+\********************************/
+
+
+#include <stdint.h>
+#include <math.h>
+#include <stdbool.h>
+#include "tm4c123gh6pm.h"
+// others?
+
+#define PI 3.14159
+// others?
+
+// global variables go here
+bool ReallyImportanThing;
+
+
+// function prototype
+uint32_t Bigone(uint32_t a, uint32_t b);
+
+int main()
+{
+// variable declarations
+	uint32_t bob;
+	bool mary;
+
+// initializations
+	GPIO_PORTB_DIR_R |= 0x0F; // pins 3-0 are output
+	// othes?
+
+	while(1)
+	{
+		// all the rest of the program behavior.
+	}
+
+	return 0;
+}
+
+// function definitions
+uint32_t FindBig(uint32_t a, uint32_t b)
+{
+	// fill this in...
+}
