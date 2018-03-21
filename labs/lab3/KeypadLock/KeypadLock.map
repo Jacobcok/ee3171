@@ -225,12 +225,21 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
+<<<<<<< HEAD
        632         50          0         24          0        400   keypad.o
        224         58          0          8          0        256   main.o
        276         24        620          0        512       5412   startup_tm4c123.o
 
     ----------------------------------------------------------------------
       1132        132        620         32        512       6068   Object Totals
+=======
+       632         50          0         24          0        376   keypad.o
+       224         58          0          8          0        232   main.o
+       276         24        620          0        512       5396   startup_tm4c123.o
+
+    ----------------------------------------------------------------------
+      1132        132        620         32        512       6004   Object Totals
+>>>>>>> 124997859ce72eac2f19af02d95796eec4c43631
          0          0          0          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -245,8 +254,13 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
+<<<<<<< HEAD
       1132        132        620         32        512       6068   Grand Totals
       1132        132        620         32        512       6068   ELF Image Totals
+=======
+      1132        132        620         32        512       6004   Grand Totals
+      1132        132        620         32        512       6004   ELF Image Totals
+>>>>>>> 124997859ce72eac2f19af02d95796eec4c43631
       1132        132        620         32          0          0   ROM Totals
 
 ==============================================================================

@@ -7,6 +7,7 @@ H:\Desktop\Github\ee3171\labs\lab3\KeypadLock\KeypadLock.uvproj
 Project File Date:  07/30/2016
 
 <h2>Output:</h2>
+<<<<<<< HEAD
 Build target 'Target 1'
 assembling main.s...
 linking...
@@ -187,3 +188,5 @@ Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
 Programming Done.
 Verify OK.
+=======
+>>>>>>> 124997859ce72eac2f19af02d95796eec4c43631

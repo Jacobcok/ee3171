@@ -35,7 +35,11 @@ ComboStart
  LDRB R9, [R8]
  
  LDR R11, =currentLEDState
+<<<<<<< HEAD
  MOV R12, #0x08 ; start with leftmost (LED3)
+=======
+ MOV R12, #0x08
+>>>>>>> 124997859ce72eac2f19af02d95796eec4c43631
  STRB R12, [R11] 
 
 ; This is the main program loop.
@@ -60,9 +64,15 @@ UpdateLED
  LDR R4, =GPIO_PORTB_DATA_R
  STRB R12, [R4] ; currentLEDstate turns on LEDs
  LSR R12, R12, #0x01 ; shift LED from left to right
+<<<<<<< HEAD
  ADD R12, #8 ; used to keep previous LED turned on when new ones are added
  CMP R9, #'5' ; check if code is completed
  BEQ TheEnd 
+=======
+ ADD R12, #8
+ CMP R9, #'5'
+ BEQ TheEnd
+>>>>>>> 124997859ce72eac2f19af02d95796eec4c43631
  
 ; Move to the next character 
  ADD R8, #1 ; increment address of combo digit by 1 byte
