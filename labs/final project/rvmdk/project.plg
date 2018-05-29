@@ -1,0 +1,170 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+H:\Desktop\Github\ee3171\labs\final project\project.uvproj
+Project File Date:  04/30/2018
+
+<h2>Output:</h2>
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'project'
+compiling project.c...
+project.c(127): error:  #65: expected a ";"
+project.c(146): warning:  #111-D: statement is unreachable
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'project'
+compiling project.c...
+project.c(146): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=2344 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'project'
+compiling project.c...
+project.c(123): warning:  #223-D: function "SysCtlPheriperalEnable" declared implicitly
+project.c(147): warning:  #111-D: statement is unreachable
+linking...
+.\rvmdk\project.axf: Error: L6218E: Undefined symbol SysCtlPheriperalEnable (referred from project.o).
+".\rvmdk\project.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'project'
+compiling project.c...
+project.c(147): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=2352 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'project'
+compiling project.c...
+project.c(147): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=2528 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'project'
+compiling project.c...
+project.c(147): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=2528 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'project'
+compiling project.c...
+project.c(147): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=3784 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'project'
+linking...
+Program Size: Code=3784 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 0 Warning(s).
+Build target 'project'
+compiling project.c...
+lcd.h(5): error:  #5: cannot open source input file "sleep.h": No such file or directory
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'project'
+compiling project.c...
+project.c(43): error:  #5: cannot open source input file "lcd.h"": No such file or directory
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'project'
+compiling project.c...
+project.c(43): error:  #5: cannot open source input file "lcd.h": No such file or directory
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'project'
+compiling project.c...
+lcd.h(5): error:  #5: cannot open source input file "sleep.h": No such file or directory
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'project'
+compiling project.c...
+project.c(149): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=3784 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Build target 'project'
+compiling project.c...
+project.c(148): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=3784 RO-data=300 RW-data=12 ZI-data=260  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Build target 'project'
+compiling project.c...
+project.c(148): warning:  #111-D: statement is unreachable
+project.c(169): error:  #167: argument of type "char" is incompatible with parameter of type "char *"
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'project'
+compiling project.c...
+project.c(149): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=4408 RO-data=300 RW-data=16 ZI-data=256  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Build target 'project'
+compiling project.c...
+project.c(149): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=4412 RO-data=300 RW-data=16 ZI-data=256  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'project'
+compiling project.c...
+project.c(149): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=4412 RO-data=300 RW-data=16 ZI-data=256  
+After Build - User command #1: fromelf --bin --output .\rvmdk\project.bin .\rvmdk\project.axf
+".\rvmdk\project.axf" - 0 Errors, 1 Warning(s).
+Load "H:\\Desktop\\Github\\ee3171\\labs\\final project\\rvmdk\\project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.

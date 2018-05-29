@@ -1,0 +1,14 @@
+.\rvmdk\project.o: project.c
+.\rvmdk\project.o: C:\winapps\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\rvmdk\project.o: C:\winapps\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\rvmdk\project.o: lcd.h
+.\rvmdk\project.o: sleep.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_memmap.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\driverlib/debug.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\driverlib/gpio.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\driverlib/interrupt.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\driverlib/rom.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\driverlib/sysctl.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\driverlib/timer.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\driverlib/adc.h
+.\rvmdk\project.o: C:\winapps\ti\TivaWare_C_Series-2.1.0.12573\inc/tm4c123gh6pm.h
